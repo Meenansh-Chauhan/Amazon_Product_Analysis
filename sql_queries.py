@@ -18,6 +18,7 @@ cursor.execute("UPDATE products SET main_category = TRIM(SPLIT_PART(category, '|
 conn.commit()
 cursor.close()
 
+
 # --- QUERY : Total Revenue By category Products ---
 df= pd.read_sql ("SELECT * FROM products", conn)
 sd= df.groupby("category")["revenue"].sum().sort_values(ascending=False)

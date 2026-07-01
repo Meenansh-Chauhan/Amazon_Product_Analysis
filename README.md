@@ -105,6 +105,7 @@ The insights derived can support better decision-making in product positioning a
 └── image-*.png       # Category specific dashboard screenshots
 ```
 
+
 ## Data Source
 
 The data used in this project is sourced from the dataset containing product information, pricing, ratings, and categories from Kaggle (`amazon.csv`).

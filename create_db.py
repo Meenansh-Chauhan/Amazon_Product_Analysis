@@ -8,7 +8,6 @@ conn = psycopg2.connect(
     host='your_host',
     port='your_port'
 )
-
 conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
 
 cursor = conn.cursor()

@@ -62,6 +62,7 @@ for index, row in df.iterrows():
 conn.commit()
 
 cursor.close()
-conn.close()
+conn.close() 
+
 
 print("Success! All 18 columns have been loaded into the database.")
