@@ -6,12 +6,25 @@ This project analyzes Amazon product data to understand how pricing, discounts, 
 
 The goal was to derive actionable business insights that can help improve revenue, customer satisfaction, and product strategy.
 
+## Business Requirements & Scope
+
+**Business Ask:** Product and category managers needed visibility into which product categories were underperforming on revenue, ratings, or discount efficiency, in order to prioritize pricing and quality interventions.
+
+**Requirements identified:**
+- Category-level revenue and rating benchmarking
+- Discount effectiveness by category (are heavy discounts converting to revenue or ratings?)
+- Identification of high-rating/low-revenue categories representing pricing opportunity
+- Identification of high-engagement/low-rating categories representing quality risk
+
+This was translated into 6 category-level SQL queries (see SQL Queries) and a 5-page Power BI dashboard drilling into category-specific performance.
+
 ##  Tools & Technologies
 
 - Excel (Data Cleaning & Preprocessing)
 - PostgreSQL (Data Storage & SQL Analysis)
 - Power BI (Dashboard & Visualization)
 - Python, Pandas (connection between tools)
+Database design and querying applied core RDBMS/DBMS principles — structured table storage in PostgreSQL with SQL-based aggregation, replacing manual Excel-only analysis for scalability.
 
 ##  Data Cleaning & Preparation
 
@@ -22,6 +35,7 @@ The goal was to derive actionable business insights that can help improve revenu
 - Created new columns:
   - Revenue (proxy) = discounted_price × rating_count
   - Profit (assumed margin-based calculation)
+  > **Note:** Revenue and Profit are modelled proxies (`discounted_price × rating_count`, assumed-margin based) since the source dataset does not include actual sales or transaction-level financial data. All revenue/profit figures in this analysis should be read as directional estimates for relative category comparison, not verified transaction totals.
 - Structured data in PostgreSQL for further analysis and visualization
 
 ## SQL Queries
